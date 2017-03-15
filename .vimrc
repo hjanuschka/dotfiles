@@ -34,6 +34,8 @@ Plugin 'leshill/vim-json'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'tpope/vim-fugitive'
 Plugin 'beyondwords/vim-twig'
+Plugin 'mileszs/ack.vim'
+
 
 
 
@@ -102,6 +104,7 @@ set list
 
 inoremap <C-U> <C-G>u<C-U>
 
+set relativenumber
 set number
 set hlsearch
 set ignorecase
