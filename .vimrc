@@ -15,10 +15,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " ------Plugins-------
-Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'gcmt/breeze.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -29,9 +28,13 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'leshill/vim-json'
 Plugin 'maksimr/vim-jsbeautify'
+Plugin 'tpope/vim-fugitive'
+Plugin 'beyondwords/vim-twig'
+
+
+
 
 
 
@@ -131,13 +134,9 @@ set completeopt=menuone,longest,preview
 " Plugins config
 "
 
-" NERDTree
-nnoremap <S-n> :NERDTreeToggle<CR>
-" autocmd vimenter * NERDTree
-
-
 " CtrlP
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 
 " vim-airline
@@ -172,6 +171,7 @@ inoremap <C-y>  <Esc>:redo<CR>
 " Tabs
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled = 1
+
 nnoremap <C-a>  :tabprevious<CR>
 inoremap <C-a>  <Esc>:tabprevious<CR>i
 nnoremap <C-y>  :tabnext<CR>
