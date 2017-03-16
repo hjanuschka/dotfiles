@@ -15,8 +15,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " ------Plugins-------
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tpope/vim-surround'
 Plugin 'gcmt/breeze.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -24,7 +22,6 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'valloric/youcompleteme'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'terryma/vim-multiple-cursors'
@@ -35,7 +32,22 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'tpope/vim-fugitive'
 Plugin 'beyondwords/vim-twig'
 Plugin 'mileszs/ack.vim'
+Plugin 'mihaifm/vimpanel'
+Plugin 'valloric/youcompleteme'
+Plugin 'marijnh/tern_for_vim'
 
+
+
+" Completion
+"Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 
 
