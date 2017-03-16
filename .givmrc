@@ -21,6 +21,8 @@ endif
 
 set guifont=Meslo\ LG\ M\ for\ Powerline:h16 
 
+let g:nerdtree_tabs_open_on_gui_startup=0
+
 let s:gc = $HOME."/.vim/custom/gvimrc"
 if filereadable(s:gc)
     exec ":source ".s:gc
