@@ -32,28 +32,19 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'tpope/vim-fugitive'
 Plugin 'beyondwords/vim-twig'
 Plugin 'mileszs/ack.vim'
-Plugin 'mihaifm/vimpanel'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'valloric/youcompleteme'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 
-
-" Completion
-"Note: This option must be set in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 
 
 
 " Nerdtree
-map <C-j> :NERDTreeToggle<CR>
+map <C-j> :NERDTreeTabsToggle<CR>
 
 
 " Color Themes
