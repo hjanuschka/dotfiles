@@ -1,8 +1,3 @@
-" Based on below
-" vim-sublime - A minimal Sublime Text - like vim experience bundle
-"               http://github.com/grigio/vim-sublime
-" Best view with a 256 color terminal and Powerline fonts
-" Updated by Dorian Neto (https://github.com/dorianneto)"
 
 " Share ClipBoard
 set clipboard=unnamed
@@ -41,6 +36,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'valloric/youcompleteme'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'milch/vim-fastlane'
 
 
 
