@@ -1,4 +1,9 @@
 
+" vim-sublime - A minimal Sublime Text - like vim experience bundle
+"               http://github.com/grigio/vim-sublime
+" Best view with a 256 color terminal and Powerline fonts
+" Updated by Dorian Neto (https://github.com/dorianneto)"
+
 " Share ClipBoard
 set clipboard=unnamed
 
@@ -33,11 +38,47 @@ Plugin 'beyondwords/vim-twig'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'valloric/youcompleteme'
-Plugin 'marijnh/tern_for_vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'milch/vim-fastlane'
 
+Plugin 'Shougo/neocomplete'
+
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+"define Keyword
+
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+map \ :
+let mapleader = ','
 
 
 
@@ -48,7 +89,9 @@ map <C-j> :NERDTreeTabsToggle<CR>
 
 
 " Color Themes
-Plugin 'colors'
+
+colorscheme Monokai
+
 
 " Beatufiy
 map <c-f> :call JsBeautify()<cr>
@@ -60,7 +103,6 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 
 call vundle#end()
-colorscheme Monokai
 filetype plugin indent on
 
 """"""""
@@ -74,10 +116,9 @@ endif
 " Use :help 'option' to see the documentation for the given option.
 set autoindent
 set backspace=indent,eol,start
-set complete-=i
 set showmatch
 set showmode
-set smarttab
+"set smarttab
 
 set nrformats-=octal
 set shiftround
@@ -137,7 +178,8 @@ set fileformats=unix,dos,mac
 " exit insert mode
 inoremap <C-c> <Esc>
 
-set completeopt=menuone,longest,preview
+
+
 
 "
 " Plugins config
@@ -150,7 +192,7 @@ let g:ctrlp_regexp = 1
 
 
 " vim-airline
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
@@ -161,8 +203,6 @@ let g:airline#extensions#tabline#show_tabs = 1
 "  most in visual mode / selection (v or ⇧ v)
 "
 
-" Find
-map <C-f> /
 " indent / deindent after selecting the text with (⇧ v), (.) to repeat.
 vnoremap <Tab> >
 vnoremap <S-Tab> <
@@ -195,9 +235,7 @@ nnoremap <C-k>  :tabclose<CR>
 inoremap <C-k>  <Esc>:tabclose<CR>i
 
 " lazy ':'
-map \ :
 
-let mapleader = ','
 nnoremap <Leader>p :set paste<CR>
 nnoremap <Leader>o :set nopaste<CR>
 noremap  <Leader>g :GitGutterToggle<CR>
