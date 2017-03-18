@@ -19,7 +19,7 @@ if has("gui_macvim")
   macmenu File.New\ File action=addNewTab: key=<D-n>
 endif
 
-set guifont=Meslo\ LG\ M\ for\ Powerline:h16 
+set guifont=Meslo\ LG\ M\ for\ Powerline:h14
 
 let g:nerdtree_tabs_open_on_gui_startup=0
 
