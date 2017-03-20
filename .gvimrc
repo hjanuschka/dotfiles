@@ -26,6 +26,7 @@ set showtabline=2
 
 
 let g:nerdtree_tabs_open_on_gui_startup=0
+set selection=inclusive
 
 let s:gc = $HOME."/.vim/custom/gvimrc"
 if filereadable(s:gc)
