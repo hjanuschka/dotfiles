@@ -47,6 +47,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Shougo/neosnippet'
 Plugin 'Shougo/neosnippet-snippets'
 
+Plugin 'dyng/ctrlsf.vim'
+
+
 
 Plugin 'Shougo/neocomplete'
 "Plugin 'Shougo/neosnippet'
