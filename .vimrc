@@ -42,10 +42,18 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'milch/vim-fastlane'
 Plugin 'mhinz/vim-startify'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+
 
 Plugin 'Shougo/neocomplete'
 "Plugin 'Shougo/neosnippet'
 "Plugin 'Shougo/neosnippet-snippets'
+"
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 
 "NEOCOMPLETE
 let g:acp_enableAtStartup = 0
