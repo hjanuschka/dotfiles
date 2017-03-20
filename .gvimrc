@@ -20,6 +20,10 @@ if has("gui_macvim")
 endif
 
 set guifont=Meslo\ LG\ M\ for\ Powerline:h14
+set showtabline=2
+
+
+
 
 let g:nerdtree_tabs_open_on_gui_startup=0
 

@@ -40,9 +40,14 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'milch/vim-fastlane'
+Plugin 'mhinz/vim-startify'
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 Plugin 'Shougo/neocomplete'
+"Plugin 'Shougo/neosnippet'
+"Plugin 'Shougo/neosnippet-snippets'
 
+"NEOCOMPLETE
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
@@ -76,6 +81,12 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+
+"NEO SNIPPETS
+"imap <expr><C-k> (pumvisible() ? "\<C-y>":"")."\<Plug>(neosnippet_expand_or_jump)"
+
+
+"""""""
 
 map \ :
 let mapleader = ','
@@ -192,9 +203,11 @@ let g:ctrlp_regexp = 1
 
 
 " vim-airline
-let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_tabs = 1
 
@@ -231,8 +244,8 @@ nnoremap <C-y>  :tabnext<CR>
 inoremap <C-y>  <Esc>:tabnext<CR>i
 nnoremap <C-t>  :tabnew<CR>
 inoremap <C-t>  <Esc>:tabnew<CR>i
-nnoremap <C-k>  :tabclose<CR>
-inoremap <C-k>  <Esc>:tabclose<CR>i
+"nnoremap <C-k>  :tabclose<CR>
+"inoremap <C-k>  <Esc>:tabclose<CR>i
 
 " lazy ':'
 
