@@ -30,6 +30,14 @@ for file in $files; do
     ln -s $dir/.$file ~/.$file
 done
 
+# install vim-plug if not here
+
+if [ ! -f ~/.vim/autoload/plug.vim ]
+then
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
 # VIM COLORS
 rm ~/.vim/colors/Monokai.vim
 ln -s ~/dotfiles/.vim/colors/Monokai.vim ~/.vim/colors/Monokai.vim
