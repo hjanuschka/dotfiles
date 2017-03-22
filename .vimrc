@@ -14,48 +14,47 @@ set lazyredraw
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
 " ------Plugins-------
-Plugin 'tpope/vim-surround'
-Plugin 'gcmt/breeze.vim'
-Plugin 'osyo-manga/vim-over'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'leshill/vim-json'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'tpope/vim-fugitive'
-Plugin 'beyondwords/vim-twig'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'milch/vim-fastlane'
-Plugin 'mhinz/vim-startify'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'tpope/vim-surround'
+Plug 'gcmt/breeze.vim'
+Plug 'osyo-manga/vim-over'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'davidhalter/jedi-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'jiangmiao/auto-pairs'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'leshill/vim-json'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'tpope/vim-fugitive'
+Plug 'beyondwords/vim-twig'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'milch/vim-fastlane'
+Plug 'mhinz/vim-startify'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'davidegx/ctrlp-smarttabs'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'dyng/ctrlsf.vim'
+Plug 'Shougo/neocomplete'
 
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
+call plug#end()
 
-Plugin 'dyng/ctrlsf.vim'
+let g:ctrlp_extensions = ['smarttabs']
+
+" ALT+P on my keyboard
+nnoremap π :CtrlPSmartTabs<CR> " Altgr+p to open SmartTabs
 
 
-
-Plugin 'Shougo/neocomplete'
-"Plugin 'Shougo/neosnippet'
-"Plugin 'Shougo/neosnippet-snippets'
-"
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 
@@ -141,7 +140,6 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 
-call vundle#end()
 filetype plugin indent on
 
 """"""""

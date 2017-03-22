@@ -15,41 +15,39 @@ lang en_US
 set nocompatible
 filetype off
 
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.config/nvim/plugged')
 
 " ------Plugins-------
-Plugin 'tpope/vim-surround'
-Plugin 'gcmt/breeze.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'leshill/vim-json'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'tpope/vim-fugitive'
-Plugin 'beyondwords/vim-twig'
-Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'milch/vim-fastlane'
-Plugin 'mhinz/vim-startify'
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'osyo-manga/vim-over'
-Plugin 'othree/javascript-libraries-syntax.vim'
-
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
+Plug 'tpope/vim-surround'
+Plug 'gcmt/breeze.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'davidhalter/jedi-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'jiangmiao/auto-pairs'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'leshill/vim-json'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'tpope/vim-fugitive'
+Plug 'beyondwords/vim-twig'
+Plug 'mileszs/ack.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'milch/vim-fastlane'
+Plug 'mhinz/vim-startify'
+Plug 'dyng/ctrlsf.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'osyo-manga/vim-over'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+call plug#end()
 
 
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -123,7 +121,6 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 
-call vundle#end()
 filetype plugin indent on
 
 """"""""
