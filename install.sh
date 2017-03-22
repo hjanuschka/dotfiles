@@ -30,5 +30,15 @@ for file in $files; do
     ln -s $dir/.$file ~/.$file
 done
 
+# VIM COLORS
 rm ~/.vim/colors/Monokai.vim
 ln -s ~/dotfiles/.vim/colors/Monokai.vim ~/.vim/colors/Monokai.vim
+
+# NVIM
+mkdir ~/.config/nvim/colors
+ln -s ~/dotfiles/.vim/colors/Monokai.vim ~/.config/nvim/colors/Monokai.vim
+ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
+
+
+# BASH PROFILE
+ln -s ~/dotfiles/.bash_profile ~/.bash_profile
