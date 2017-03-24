@@ -265,8 +265,11 @@ inoremap <C-y>  <Esc>:redo<CR>
 let g:airline_theme='badwolf'
 let g:airline#extensions#tabline#enabled = 1
 
-nnoremap <C-a>  :tabprevious<CR>
-inoremap <C-a>  <Esc>:tabprevious<CR>i
+nnoremap <C-a> <esc>ggVG<CR>
+
+
+nnoremap <C-x>  :tabprevious<CR>
+inoremap <C-x>  <Esc>:tabprevious<CR>i
 nnoremap <C-y>  :tabnext<CR>
 inoremap <C-y>  <Esc>:tabnext<CR>i
 nnoremap <C-t>  :tabnew<CR>
