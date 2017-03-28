@@ -16,6 +16,7 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
+Plug 'marijnh/tern_for_vim'
 Plug 'tpope/vim-surround'
 Plug 'gcmt/breeze.vim'
 Plug 'osyo-manga/vim-over'
