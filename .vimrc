@@ -14,9 +14,15 @@ set lazyredraw
 set nocompatible
 filetype off
 
+
+let g:DisableAutoPHPFolding = 1
+let php_folding = 0
+
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
+Plug 'spf13/piv'
 Plug 'marijnh/tern_for_vim'
+Plug 'empanda/vim-varnish'
 Plug 'tpope/vim-surround'
 Plug 'gcmt/breeze.vim'
 Plug 'osyo-manga/vim-over'
@@ -49,6 +55,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'Shougo/neocomplete'
 
 call plug#end()
+
 
 let g:ctrlp_extensions = ['smarttabs']
 

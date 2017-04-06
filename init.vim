@@ -18,8 +18,11 @@ filetype off
 call plug#begin('~/.config/nvim/plugged')
 
 " ------Plugins-------
+Plug 'marijnh/tern_for_vim'
+Plug 'empanda/vim-varnish'
 Plug 'tpope/vim-surround'
 Plug 'gcmt/breeze.vim'
+Plug 'osyo-manga/vim-over'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
@@ -40,13 +43,12 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'milch/vim-fastlane'
 Plug 'mhinz/vim-startify'
-Plug 'dyng/ctrlsf.vim'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'osyo-manga/vim-over'
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'Shougo/deoplete.nvim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'davidegx/ctrlp-smarttabs'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'dyng/ctrlsf.vim'
 call plug#end()
 
 
