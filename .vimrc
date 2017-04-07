@@ -20,7 +20,7 @@ let php_folding = 0
 
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
-Plug 'spf13/piv'
+Plug 'stephpy/vim-php-cs-fixer'
 Plug 'marijnh/tern_for_vim'
 Plug 'empanda/vim-varnish'
 Plug 'tpope/vim-surround'
@@ -56,6 +56,8 @@ Plug 'Shougo/neocomplete'
 
 call plug#end()
 
+let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
+let g:php_cs_fixer_cache = "/tmp/.php_cs.cache" " options: --cache-file
 
 let g:ctrlp_extensions = ['smarttabs']
 
@@ -146,6 +148,7 @@ autocmd FileType json noremap <buffer> <c-f> :call JsonBeautify()<cr>
 autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+autocmd FileType php noremap <buffer> <c-f> :call PhpCsFixerFixFile()<cr>
 
 
 filetype plugin indent on
