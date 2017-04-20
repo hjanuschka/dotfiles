@@ -20,6 +20,7 @@ let php_folding = 0
 
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
+Plug 'evanmiller/nginx-vim-syntax'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'marijnh/tern_for_vim'
 Plug 'empanda/vim-varnish'
@@ -121,6 +122,7 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 
 "NEO SNIPPETS
 "imap <expr><C-k> (pumvisible() ? "\<C-y>":"")."\<Plug>(neosnippet_expand_or_jump)"
+"
 
 
 """""""
