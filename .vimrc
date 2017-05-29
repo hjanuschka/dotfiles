@@ -20,7 +20,9 @@ let php_folding = 0
 
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
+Plug 'kana/vim-textobj-user'
 Plug 'vim-syntastic/syntastic'
+Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'marijnh/tern_for_vim'
