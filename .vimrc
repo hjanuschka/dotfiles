@@ -20,6 +20,7 @@ let php_folding = 0
 
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
+Plug 'rhysd/vim-clang-format'
 Plug 'evanmiller/nginx-vim-syntax'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'marijnh/tern_for_vim'
@@ -143,6 +144,13 @@ map <C-j> :NERDTreeTabsToggle<CR>
 
 colorscheme Monokai
 
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11",
+            \ "BreakBeforeBraces" : "Stroustrup"}
+
 
 " Beatufiy
 map <c-f> :call JsBeautify()<cr>
@@ -152,6 +160,7 @@ autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 autocmd FileType php noremap <buffer> <c-f> :call PhpCsFixerFixFile()<cr>
+autocmd FileType c,cpp,objc noremap <buffer> <c-f> :<C-u>ClangFormat<CR>
 
 
 filetype plugin indent on
