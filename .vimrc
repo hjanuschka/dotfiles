@@ -21,7 +21,6 @@ let php_folding = 0
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
 Plug 'rhysd/vim-clang-format'
-Plug 'evanmiller/nginx-vim-syntax'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'marijnh/tern_for_vim'
 Plug 'empanda/vim-varnish'
