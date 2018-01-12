@@ -14,12 +14,17 @@ set lazyredraw
 set nocompatible
 filetype off
 
+set directory^=$HOME/tmp/hjvim
+set backupdir^=$HOME/tmp/hjvim
+let g:loaded_matchparen = 1
+
 
 let g:DisableAutoPHPFolding = 1
 let php_folding = 0
 
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
+"Plug 'w0rp/ale'
 Plug 'rhysd/vim-clang-format'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'marijnh/tern_for_vim'
@@ -34,12 +39,15 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'davidhalter/jedi-vim'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
 Plug 'terryma/vim-multiple-cursors'
 Plug 'jiangmiao/auto-pairs'
-Plug 'jelera/vim-javascript-syntax'
+"Plug 'jelera/vim-javascript-syntax'
+
 Plug 'leshill/vim-json'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'beyondwords/vim-twig'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
@@ -57,6 +65,10 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'Shougo/neocomplete'
 
 call plug#end()
+
+" JS as JSX
+let g:jsx_ext_required = 0
+ 
 
 let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
 let g:php_cs_fixer_cache = "/tmp/.php_cs.cache" " options: --cache-file
