@@ -22,7 +22,7 @@ filetype off
 
 set directory^=$HOME/tmp/hjvim
 set backupdir^=$HOME/tmp/hjvim
-let g:loaded_matchparen = 1
+"let g:loaded_matchparen = 1
 
 
 let g:DisableAutoPHPFolding = 1
@@ -30,7 +30,7 @@ let php_folding = 0
 
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
-"Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'crusoexia/vim-monokai'
 Plug 'rhysd/vim-clang-format'
 Plug 'stephpy/vim-php-cs-fixer'
