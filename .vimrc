@@ -26,6 +26,7 @@ let php_folding = 0
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
 "Plug 'w0rp/ale'
+Plug 'crusoexia/vim-monokai'
 Plug 'rhysd/vim-clang-format'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'marijnh/tern_for_vim'
@@ -154,7 +155,7 @@ map <C-j> :NERDTreeTabsToggle<CR>
 
 " Color Themes
 
-colorscheme Monokai
+colorscheme monokai
 
 let g:clang_format#style_options = {
             \ "AccessModifierOffset" : -4,
