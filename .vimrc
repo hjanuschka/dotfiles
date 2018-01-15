@@ -43,7 +43,7 @@ Plug 'mxw/vim-jsx'
 
 Plug 'terryma/vim-multiple-cursors'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'jelera/vim-javascript-syntax'
+Plug 'jelera/vim-javascript-syntax'
 
 Plug 'leshill/vim-json'
 Plug 'maksimr/vim-jsbeautify'
@@ -219,7 +219,7 @@ set list
 
 inoremap <C-U> <C-G>u<C-U>
 
-set relativenumber
+"set relativenumber
 set number
 set hlsearch
 set ignorecase
