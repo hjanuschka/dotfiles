@@ -6,6 +6,11 @@
 
 " Share ClipBoard
 set clipboard=unnamed
+set t_Co=256  " vim-monokai now only support 256 colours in terminal.
+"
+
+let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
 
 set re=1
 set ttyfast
