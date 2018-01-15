@@ -10,6 +10,7 @@ set clipboard=unnamed
 set re=1
 set ttyfast
 set lazyredraw
+set nofsync
 
 set nocompatible
 filetype off
