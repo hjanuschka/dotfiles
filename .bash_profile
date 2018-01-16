@@ -32,3 +32,5 @@ alias sl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 alias fl="bundle exec fastlane"
 
+
+export PATH="$HOME/.cargo/bin:$PATH"

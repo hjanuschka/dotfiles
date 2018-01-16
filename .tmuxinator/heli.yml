@@ -1,0 +1,8 @@
+name: HELI
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - mvim -v
+        - 
+

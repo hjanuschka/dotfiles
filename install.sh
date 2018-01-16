@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc gvimrc"    # list of files/folders to symlink in homedir
+files="vimrc gvimrc tmux.conf tmuxinator"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -16,6 +16,10 @@ files="vimrc gvimrc"    # list of files/folders to symlink in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
 echo "...done"
+
+echo "installing brew dependency for tmux"
+brew install reattach-to-user-namespace
+brew install tmuxinator
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
@@ -37,16 +41,6 @@ then
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
-
-# VIM COLORS
-rm ~/.vim/colors/Monokai.vim
-ln -s ~/dotfiles/.vim/colors/Monokai.vim ~/.vim/colors/Monokai.vim
-
-# NVIM
-mkdir ~/.config/nvim/colors
-ln -s ~/dotfiles/.vim/colors/Monokai.vim ~/.config/nvim/colors/Monokai.vim
-ln -s ~/dotfiles/init.vim ~/.config/nvim/init.vim
-
 
 # BASH PROFILE
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile

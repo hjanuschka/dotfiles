@@ -333,6 +333,14 @@ nnoremap <Leader>p :set paste<CR>
 nnoremap <Leader>o :set nopaste<CR>
 noremap  <Leader>g :GitGutterToggle<CR>
 
+
+
+
+" TAB NAV
+"nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+"nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
+
+
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
