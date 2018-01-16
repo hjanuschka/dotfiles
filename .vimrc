@@ -17,6 +17,10 @@ set ttyfast
 set lazyredraw
 set nofsync
 
+
+
+
+
 set nocompatible
 filetype off
 
@@ -328,3 +332,6 @@ noremap  <Leader>g :GitGutterToggle<CR>
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+
+
