@@ -36,6 +36,7 @@ call plug#begin('~/.vim/plugged')
 " ------Plugins-------
 Plug 'w0rp/ale'
 Plug 'crusoexia/vim-monokai'
+Plug 'tpope/vim-endwise'
 Plug 'rhysd/vim-clang-format'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'marijnh/tern_for_vim'
