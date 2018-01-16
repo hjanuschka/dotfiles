@@ -272,6 +272,10 @@ inoremap <C-c> <Esc>
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_regexp = 1
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
 
 
 " vim-airline
