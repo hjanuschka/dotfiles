@@ -19,7 +19,7 @@ if has("gui_macvim")
   macmenu File.New\ File action=addNewTab: key=<D-n>
 endif
 
-set guifont=Meslo\ LG\ M\ for\ Powerline:h15
+set guifont=Meslo\ LG\ M\ for\ Powerline:h16
 set showtabline=2
 "Airline sets console tabs by default
 autocmd VimEnter * set guioptions+=e
