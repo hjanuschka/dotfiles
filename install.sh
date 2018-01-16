@@ -20,6 +20,8 @@ echo "...done"
 echo "installing brew dependency for tmux"
 brew install reattach-to-user-namespace
 brew install tmuxinator
+brew cask install iterm
+brew install tty-clock
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
