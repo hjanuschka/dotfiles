@@ -78,6 +78,13 @@ Plug 'Shougo/neocomplete'
 
 call plug#end()
 
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+
 " JS as JSX
 let g:jsx_ext_required = 0
  
@@ -280,13 +287,19 @@ let g:ctrlp_prompt_mappings = {
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#close_symbol = '×'
+let g:airline#extensions#tabline#show_close_button = 0
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tabs = 1
 
 "
 " Basic shortcuts definitions
