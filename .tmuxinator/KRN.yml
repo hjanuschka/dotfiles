@@ -1,5 +1,5 @@
-name: KRN🚀
-#on_project_start: tmux -CC attach
+name: KRN
+on_project_start: tmux -CC attach
 windows:
   - API:
       panes:
