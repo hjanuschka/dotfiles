@@ -34,6 +34,7 @@ let php_folding = 0
 
 call plug#begin('~/.vim/plugged')
 " ------Plugins-------
+Plug 'iberianpig/tig-explorer.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'w0rp/ale'
 Plug 'crusoexia/vim-monokai'
