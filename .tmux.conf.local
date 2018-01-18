@@ -265,4 +265,4 @@ set -g mouse on
 
 # move status line to top
 set -g status-position bottom
-
+set -g focus-events on
