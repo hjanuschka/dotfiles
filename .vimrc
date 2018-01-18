@@ -80,10 +80,16 @@ call plug#end()
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'php': ['phpcs'],
 \}
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint', 'remove_trailing_lines', 'trim_whitespace'],
+\   'ruby': ['rubocop', 'remove_trailing_lines', 'trim_whitespace'],
+\   'php': ['phpcbf', 'remove_trailing_lines', 'trim_whitespace'],
+\   'sh': ['shmft', 'remove_trailing_lines', 'trim_whitespace'],
 \}
+let g:ale_php_phpcs_standard = "PSR2"
+let g:ale_php_phpcbf_standard = 'PSR2'
 
 " JS as JSX
 let g:jsx_ext_required = 0

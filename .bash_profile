@@ -14,14 +14,19 @@ fi
 #export GITAWAREPROMPT=~/.bash/git-aware-prompt
 #source "${GITAWAREPROMPT}/main.sh"
 
-
+ORIG_PS1=$PS1
 function _update_ps1() {
-    PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+    if [[ $PWD != *KRN*  ]] 
+      then
+        PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+      else
+        PS1=$ORIG_PS1
+      fi
 }
 
-#if [ "$TERM" != "linux" ]; then
-#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
+if [ "$TERM" != "linux" ]; then
+      PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
