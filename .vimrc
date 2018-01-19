@@ -37,6 +37,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'iberianpig/tig-explorer.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'w0rp/ale'
+Plug 'ryanoasis/vim-devicons'
 Plug 'crusoexia/vim-monokai'
 Plug 'tpope/vim-endwise'
 Plug 'rhysd/vim-clang-format'

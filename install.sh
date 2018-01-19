@@ -18,6 +18,10 @@ mkdir -p $olddir
 echo "...done"
 
 echo "installing brew dependency for tmux"
+brew tap caskroom/fonts
+
+
+brew cask install font-meslo-nerd-font
 brew install reattach-to-user-namespace
 brew install tmuxinator
 brew cask install iterm
