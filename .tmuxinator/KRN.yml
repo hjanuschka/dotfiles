@@ -2,21 +2,37 @@ name: KRN
 #on_project_start: tmux -CC attach
 windows:
   - API:
-      panes:
-        - mvim -v /KRN/API
-  - FRONTEND:
-      panes:
-        - mvim -v /KRN/FRONTEND
-  - BACKEND:
-      panes:
-        - mvim -v /KRN/BACKEND
-  - WordPress:
-      panes:
-        - mvim -v /WordPress
-  - DIV:
-      layout: a0b0,283x65,0,0{188x65,0,0,0,94x65,189,0[94x55,189,0,1,94x9,189,56,2]}
+      layout: 4fa0,240x62,0,0{157x62,0,0,0,82x62,158,0[82x38,158,0,5,82x23,158,39,10]}
+      root: /KRN/API
       panes:
         - mvim -v
-        - while true; do clear; curl wttr.in/Vienna?0; sleep 30; done
-        - tty-clock -b -C 2 -s -B -x
+        - sleep 5 && tig  status
+        - 
+  - FRONTEND:
+      layout: 4fa0,240x62,0,0{157x62,0,0,0,82x62,158,0[82x38,158,0,5,82x23,158,39,10]}
+      root: /KRN/FRONTEND
+      panes:
+        - mvim -v /KRN/FRONTEND
+        - sleep 5 && tig  status
+        - 
+  - BACKEND:
+      layout: 4fa0,240x62,0,0{157x62,0,0,0,82x62,158,0[82x38,158,0,5,82x23,158,39,10]}
+      root: /KRN/BACKEND
+      layout: main-vertical
+      panes:
+        - mvim -v /KRN/BACKEND
+        - sleep 5 && tig  status
+        - 
+  - WordPress:
+      root: /WordPress/
+      layout: main-vertical
+      panes:
+        - mvim -v /WordPress
+        -
+  - DIV:
+      layout: main-vertical
+      root: /KRN
+      panes:
+        - mvim -v
+        -
 
