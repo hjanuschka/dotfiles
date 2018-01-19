@@ -14,15 +14,14 @@ windows:
       panes:
         - mvim -v /KRN/FRONTEND
         - sleep 5 && tig  status
-        - 
+        -
   - BACKEND:
       layout: 4fa0,240x62,0,0{157x62,0,0,0,82x62,158,0[82x38,158,0,5,82x23,158,39,10]}
       root: /KRN/BACKEND
-      layout: main-vertical
       panes:
         - mvim -v /KRN/BACKEND
         - sleep 5 && tig  status
-        - 
+        -
   - WordPress:
       root: /WordPress/
       layout: main-vertical
